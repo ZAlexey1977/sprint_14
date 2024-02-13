@@ -12,23 +12,30 @@ class Test {
 // Запустите код написанный ниже. Да, статические свойства можно менять, однако лучше не злоупотреблять подобным кодом,
 //ведь статические данные - на то и статические, чтобы не меняться.
 
-Test.a = 99;
-console.log(Test.a);
+// Test.a = 99;
+// console.log(Test.a);
 
 // Task 03
 // Создайте класс Test_03 со статическим readonly свойством a (number) равное 222.
 
+class Test_03 {
+  public static readonly a: number = 222;
+}
 // Проверка
-// console.log(Test_03.a);
+console.log(Test_03.a);
 
 // Task 04
 // В классе можно совмещать свойства обычные и static с одинаковыми именами.
 // Создайте класс Test_04 со свойством x (number) равное 4 и со свойством static x (number) равное 5.
 
+class Test_04 {
+  public x: number = 4;
+  public static x: number = 5;
+}
 // Проверка
-// console.log(Test_04.x);
-// let obj_04 = new Test_04();
-// console.log(obj_04.x);
+console.log(Test_04.x);
+let obj_04 = new Test_04();
+console.log(obj_04.x);
 
 // Task 05
 // Статическими могут быть не только свойства, но и методы. Создайте класс Test_05 со статическим методом avogadro,
