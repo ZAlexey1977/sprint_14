@@ -22,7 +22,7 @@ class Test_03 {
   public static readonly a: number = 222;
 }
 // Проверка
-console.log(Test_03.a);
+// console.log(Test_03.a);
 
 // Task 04
 // В классе можно совмещать свойства обычные и static с одинаковыми именами.
@@ -33,23 +33,33 @@ class Test_04 {
   public static x: number = 5;
 }
 // Проверка
-console.log(Test_04.x);
-let obj_04 = new Test_04();
-console.log(obj_04.x);
+// console.log(Test_04.x);
+// let obj_04 = new Test_04();
+// console.log(obj_04.x);
 
 // Task 05
 // Статическими могут быть не только свойства, но и методы. Создайте класс Test_05 со статическим методом avogadro,
 // метод возвращает число 6.022. Не забудьте прописать тип метода.
 
+class Test_05 {
+  public static avogadro(): number {
+    return 6.022;
+  }
+}
 // Проверка
-// console.log(Test_05.avogadro());
+console.log(Test_05.avogadro());
 
 // Task 06
 // Напишите класс Test_06 со статическим методом perimeter. Метод принимает две стороны прямоугольника a,
 // b number и возвращает периметр прямоугольника. Не забывайте про типы данных.
 
+class Test_06 {
+  public static perimeter(a: number, b: number): number {
+    return (a + b) * 2;
+  }
+}
 // Проверка
-// console.log(Test_06.perimeter(2, 3)); // ожидаем 10
+console.log(Test_06.perimeter(2, 3)); // ожидаем 10
 
 // Task 07
 // Статические методы могут использовать другие статические свойства через this. Создайте класс Test_07.
