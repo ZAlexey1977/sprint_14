@@ -47,7 +47,7 @@ class Test_05 {
   }
 }
 // Проверка
-console.log(Test_05.avogadro());
+// console.log(Test_05.avogadro());
 
 // Task 06
 // Напишите класс Test_06 со статическим методом perimeter. Метод принимает две стороны прямоугольника a,
@@ -59,7 +59,7 @@ class Test_06 {
   }
 }
 // Проверка
-console.log(Test_06.perimeter(2, 3)); // ожидаем 10
+// console.log(Test_06.perimeter(2, 3)); // ожидаем 10
 
 // Task 07
 // Статические методы могут использовать другие статические свойства через this. Создайте класс Test_07.
@@ -74,32 +74,36 @@ class Test_07 {
   }
 }
 // Проверка
-console.log(Test_07.validate("abba12345"));
+// console.log(Test_07.validate("abba12345"));
 
 // Task 08
 // Статические методы и свойства могут наследоваться. Создайте класс Test_08, который наследуется от класса Test_07.
 // Ничего не пишите в класс. Запустите проверку.
 
+class Test_08 extends Test_07 {}
 // Проверка
-// console.log('Test_08');
-// console.log(Test_08.validate('abba12345'));
+// console.log("Test_08");
+// console.log(Test_08.validate("abba12345"));
 
 // Task 09
 // Создайте класс Test_09, который наследуется от класса Test_07. В классе создайте статическое свойство passwordLength = 10.
 // Запустите проверку.
 
+class Test_09 extends Test_07 {
+  public static passwordLength: number = 10;
+}
 // Проверка
 // console.log(Test_09.passwordLength);
-// console.log(Test_09.validate('abba12345'));
+// console.log(Test_09.validate("abba12345"));
 
 // Task 10
 // Статические свойства могут быть не только public, но и private. Изучите пример.
 
 // class Test_10 {
-//     private static foo : number = 70;
-//     public static foo10 () : number {
-//         return this.foo * 10;
-//     }
+//   private static foo: number = 70;
+//   public static foo10(): number {
+//     return this.foo * 10;
+//   }
 // }
 
 // Проверка
